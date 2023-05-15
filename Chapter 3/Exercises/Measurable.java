@@ -6,9 +6,8 @@ public interface Measurable {
 
 	default public double average(Measurable[] objects) {
 		double sumMeasure = 0;
-		for (int i = 0; i < objects.length; i++) {
+		for (int i = 0; i < objects.length; i++)
 			sumMeasure += objects[i].getMeasure();
-		}
 		
 		return sumMeasure / (double) objects.length;
 	}

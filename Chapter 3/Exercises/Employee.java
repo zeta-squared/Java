@@ -1,7 +1,8 @@
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Objects;
 
-public class Employee implements Measurable {
+public class Employee implements Measurable, Service {
 	private String name;
 	private double salary;
 	private LocalDate hireDay;
@@ -35,5 +36,9 @@ public class Employee implements Measurable {
 	 */
 	public double getMeasure() {
 		return this.salary;
+	}
+
+	public Period getService() {
+		return this.hireDay.until(LocalDate.now());
 	}
 }
