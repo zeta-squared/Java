@@ -11,6 +11,10 @@ public class LabeledPoint extends Point {
 	}
 
 	public String getLabel() { return this.label; }
+
+	public String getCoords(Point point) {
+		return "[x=" + point.x + ",y=" + point.y + "]";
+	}
 	
 	@Override
 	public String toString() {

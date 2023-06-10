@@ -5,8 +5,14 @@ public class Test {
 		Point point1 = new Point(1.2, 2.1);
 		Point point2 = new Point(1.2, 2.1);
 
-		Point labeledPoint1 = new LabeledPoint("vertex", 1.2, 2.1);
-		Point labeledPoint2 = new LabeledPoint("vertex", 1.2, 2.1);
+		LabeledPoint labeledPoint1 = new LabeledPoint("vertex", 1.2, 2.1);
+		LabeledPoint labeledPoint2 = new LabeledPoint("vertex", 1.2, 2.1);
+
+		/* test protected variable access */
+		System.out.println("Testing protected accesses on LabeledPoint object: " +
+				labeledPoint1.getCoords(labeledPoint1));
+		System.out.println("Testing protected accesses on Point object: " +
+				labeledPoint1.getCoords(point1));
 
 		/* test toString method */
 		System.out.println("Testing toString method:");
