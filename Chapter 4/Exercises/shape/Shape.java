@@ -2,7 +2,7 @@ package shape;
 
 import point.Point;
 
-public abstract class Shape {
+public abstract class Shape implements Cloneable {
 	protected Point point;
 	
 	public Shape(Point point) {
